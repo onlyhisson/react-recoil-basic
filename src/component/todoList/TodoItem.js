@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import todoListState from "../../recoil/todoList";
+import { todoListState } from "../../recoil/todoList";
 
 const replaceItemAtIndex = (arr, index, newValue) => {
   return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
