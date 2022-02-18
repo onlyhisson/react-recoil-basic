@@ -4,8 +4,6 @@ import { withUserImg } from "../../recoil/myApp";
 
 const MyAppAsync = () => {
   const { status, message } = useRecoilValue(withUserImg);
-  //const status = "success";
-  //const message = "https://images.dog.ceo/breeds/beagle/n02088364_14690.jpg";
   return (
     <div>
       <div>{status}</div>

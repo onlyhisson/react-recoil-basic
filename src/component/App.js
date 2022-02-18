@@ -12,6 +12,8 @@ const App = () => {
         <CharacterCounter />
       </div>
 
+      <hr />
+
       <h1>To-Do list</h1>
       <div className="App-item">
         <TodoList />
