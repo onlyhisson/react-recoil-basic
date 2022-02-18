@@ -11,25 +11,24 @@ const axiosDogImgUrl = async (name) => {
       const {
         data: { status, message },
       } = response;
-
-      console.log(">> status : ", status);
-      console.log(">> message : ", message);
-
-      if (status === "error") {
-        result.message = message;
-      } else {
-        result.status = status;
-        result.message = message;
-      }
+      result.status = status;
+      result.message = message;
     })
     .catch(function (error) {
-      console.log(">> error : ", error);
-      if (error.message) {
-        result.message = error.message;
+      result.error = error;
+      if (error.response) {
+        console.log("Error : ", "2XX 이외 상태 코드 응답");
+        //console.log(error.response);
+      } else if (error.request) {
+        console.log("Error : ", "응답이 없음");
+        //console.log(error.request);
+      } else {
+        console.log("Error : ", "요청 설정 문제");
+        //console.log("Error", error.message);
       }
+      //console.log("Error Config : ", error.config);
     })
     .then(function () {
-      console.log(">> result : ", result);
       return result;
     });
 };
