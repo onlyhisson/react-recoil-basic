@@ -9,9 +9,6 @@ const Error = ({ props: { status, message } }) => {
     mouseY: 0,
   });
 
-  let pageX = width;
-  let pageY = height;
-
   function handleMouseMove(event) {
     const mouseY = event.pageY;
     const yAxis = ((height / 2 - mouseY) / height) * 300;
