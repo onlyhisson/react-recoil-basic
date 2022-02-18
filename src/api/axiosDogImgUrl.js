@@ -4,7 +4,7 @@ const URL = "https://dog.ceo/api/breed/@breeds/images/random";
 const axiosDogImgUrl = async (name) => {
   const result = { status: "failed", message: "API Error" };
   const url = URL.replace("@breeds", name);
-  axios
+  await axios
     .get(url)
     .then(function (response) {
       const {
@@ -29,8 +29,8 @@ const axiosDogImgUrl = async (name) => {
     })
     .then(function () {
       console.log(">> result : ", result);
-      return result;
     });
+  return result;
 };
 
 export default axiosDogImgUrl;

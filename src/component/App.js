@@ -2,6 +2,7 @@ import "./App.css";
 import CharacterCounter from "./characterCounter";
 import TodoList from "./todoList";
 import MyApp from "./myAppSync";
+import MyAppAsync from "./myAppAsync";
 
 const App = () => {
   return (
@@ -21,6 +22,13 @@ const App = () => {
       <h1>My App - Synchronous Example</h1>
       <div className="App-item">
         <MyApp />
+      </div>
+
+      <hr />
+
+      <h1>My App - Asynchronous Example</h1>
+      <div className="App-item">
+        <MyAppAsync />
       </div>
     </div>
   );

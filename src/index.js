@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
       <ErrorBoundary>
-        <React.Suspense fallback={Loading}>
+        <React.Suspense fallback={Loading()}>
           <App />
         </React.Suspense>
       </ErrorBoundary>
